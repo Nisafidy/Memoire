@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Énergie Madagascar - Potentiel & Recommandation</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌞 Votre recommandation énergétique personnalisée</h1>
+
+        <!-- Carte -->
+        <div id="map" style="height: 450px; margin: 15px 0;"></div>
+
+        <!-- Infos position -->
+        <div id="coordinates-display" style="margin: 10px 0; font-weight: bold;"></div>
+
+        <!-- Résultats du potentiel (déjà existant) -->
+        <div id="results"></div>
+
+        <!-- Formulaire ML pré-rempli (s'affiche automatiquement) -->
+        <div id="ml-section" style="display: none; margin-top: 25px; padding: 20px; background: #e8f5e9; border-radius: 12px;">
+            <h3>🌟 Votre recommandation ML</h3>
+            <div id="ml-results"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* frontend/css/style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Barre de recherche */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+#search-btn {
+    padding: 12px 25px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#search-btn:hover {
+    background: #5a67d8;
+}
+
+/* Carte */
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 3px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Affichage des coordonnées */
+#coordinates-display {
+    background: #f7f9fc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-family: monospace;
+    font-size: 14px;
+    border-left: 4px solid #667eea;
+}
+
+/* Résultats */
+#results {
+    margin-top: 20px;
+}
+
+.potential-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.potential-section {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.potential-section h4 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 1.1em;
+}
+
+.potential-section p {
+    margin: 8px 0;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.potential-summary {
+    margin-top: 20px;
+    padding: 15px;
+    background: #ebf4ff;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    border: 2px solid #667eea;
+}
+
+.altitude-info {
+    text-align: right;
+    color: #718096;
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.error-message {
+    padding: 20px;
+    background: #fff5f5;
+    border: 1px solid #fc8181;
+    border-radius: 10px;
+    color: #c53030;
+    text-align: center;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Marqueur personnalisé */
+.custom-marker {
+    background: none;
+    border: none;
+    font-size: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    #map {
+        height: 300px;
+    }
+}

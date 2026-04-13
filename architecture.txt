@@ -1,0 +1,30 @@
+mon-projet/
+├── frontend/                    # ✅ Application web (fonctionne)
+│   ├── index.html               # Carte Leaflet, interface utilisateur
+│   ├── css/style.css            # Styles
+│   └── js/script.js             # Clics, recherche, affichage résultats
+│
+├── backend/                     # ✅ Serveur Node.js (fonctionne)
+│   ├── server.js                # Express, routes, connexions API
+│   ├── routes/
+│   │   ├── weather.js           # Météo (Open-Meteo)
+│   │   └── potential.js         # Potentiel solaire + conseils
+│   └── services/
+│       ├── weatherService.js    # Appels Open-Meteo
+│       └── potentialService.js  # PVGIS + distance villes + conseils
+│
+├── ml/                          # ⚠️ Dossier ML (en cours, non intégré)
+│   ├── data/
+│   │   ├── raw/                 # Données brutes (EPM, nos 75 réponses)
+│   │   ├── cleaned/             # Données nettoyées
+│   │   └── enriched/            # Données avec PVGIS
+│   ├── scripts/                 # Scripts Python (nettoyage, fusion, ML)
+│   │   ├── nettoyer.py
+│   │   ├── enrichir.py
+│   │   ├── fusion_impo_empl.py
+│   │   ├── preparer_ml_epm.py
+│   │   └── entrainer_modele_epm.py
+│   ├── models/                  # Modèles entraînés (modele_consommation_epm.pkl)
+│   └── notebooks/               # (vides)
+│
+└── README.md

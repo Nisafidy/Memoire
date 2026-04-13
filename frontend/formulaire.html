@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquête Consommation Énergétique - Madagascar</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f6f9; margin: 0; padding: 15px; }
+        .container { max-width: 850px; margin: auto; background: white; border-radius: 12px; box-shadow: 0 4px 25px rgba(0,0,0,0.1); overflow: hidden; }
+        header { background: #28a745; color: white; padding: 25px; text-align: center; }
+        h1 { margin: 0; font-size: 1.9em; }
+        .form-section { padding: 30px 25px; }
+        label { display: block; margin: 22px 0 8px; font-weight: 600; color: #222; }
+        .required { color: red; }
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em;
+        }
+        .option { margin: 10px 0; display: flex; align-items: flex-start; gap: 10px; }
+        button { background: #28a745; color: white; padding: 16px; font-size: 1.2em; border: none; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 40px; }
+        button:hover { background: #218838; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Enquête Consommation Énergétique</h1>
+            <p>Madagascar • Aidez-nous à mieux comprendre vos besoins</p>
+        </header>
+
+        <div class="form-section">
+            <form id="questionnaire-form">
+
+                <label>0. Votre adresse email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="votre.email@gmail.com" required>
+
+                <label>1. Quel est votre âge ? <span class="required">*</span></label>
+                <select id="age" name="age" required>
+                    <option value="">Choisissez...</option>
+                    <option value="Moins de 18 ans">- Moins de 18 ans</option>
+                    <option value="18-25 ans">- 18-25 ans</option>
+                    <option value="26-35 ans">- 26-35 ans</option>
+                    <option value="36-45 ans">- 36-45 ans</option>
+                    <option value="46-55 ans">- 46-55 ans</option>
+                    <option value="56-65 ans">- 56-65 ans</option>
+                    <option value="Plus de 65 ans">- Plus de 65 ans</option>
+                </select>
+
+                <label>2. Vous êtes ? <span class="required">*</span></label>
+                <div class="option"><input type="radio" name="statut" value="pere" required> Le père / Chef de famille</div>
+                <div class="option"><input type="radio" name="statut" value="mere"> La mère</div>
+                <div class="option"><input type="radio" name="statut" value="enfant"> Un enfant (fils/fille)</div>
+                <div class="option"><input type="radio" name="statut" value="autre"> Un autre membre de la famille</div>
+
+                <label>4. Où habitez-vous actuellement ? <span class="required">*</span></label>
+                <input type="text" id="lieu_actuel" name="lieu_actuel" placeholder="Ex: Antananarivo - Analamahitsy" required>
+
+                <label>6. Combien de personnes vivent dans votre foyer ? <span class="required">*</span></label>
+                <select id="nb_personnes" name="nb_personnes" required>
+                    <option value="">Choisissez...</option>
+                    <option value="1">1 personne</option><option value="2">2 personnes</option>
+                    <option value="3">3 personnes</option><option value="4">4 personnes</option>
+                    <option value="5">5 personnes</option><option value="6">6 personnes</option>
+                    <option value="7">7 personnes</option><option value="8">8 personnes</option>
+                    <option value="9">9 personnes</option><option value="10+">10 personnes ou plus</option>
+                </select>
+
+                <label>7. Combien d'enfants de moins de 21 ans ? <span class="required">*</span></label>
+                <select id="nb_enfants" name="nb_enfants" required>
+                    <option value="">Choisissez...</option>
+                    <option value="0">0 enfant</option><option value="1">1 enfant</option>
+                    <option value="2">2 enfants</option><option value="3">3 enfants</option>
+                    <option value="4">4 enfants</option><option value="5">5 enfants</option>
+                    <option value="6">6 enfants</option><option value="7">7 enfants</option>
+                    <option value="8">8 enfants</option><option value="9">9 enfants</option>
+                    <option value="10+">10 enfants ou plus</option>
+                </select>
+
+                <label>8. Profession du père / chef de famille ? <span class="required">*</span></label>
+                <select id="profession_pere" name="profession_pere" required>
+                    <option value="">Choisissez...</option>
+                    <option value="fonctionnaire">Fonctionnaire</option>
+                    <option value="commerce">Commerce</option>
+                    <option value="artisanat">Artisanat</option>
+                    <option value="agriculture">Agriculture</option>
+                    <option value="btp">BTP/Construction</option>
+                    <option value="sante">Santé</option>
+                    <option value="retraite">Retraité</option>
+                    <option value="sans_emploi">Sans emploi</option>
+                    <option value="autre">Autre</option>
+                </select>
+
+                <label>10. Profession de la mère ? <span class="required">*</span></label>
+                <select id="profession_mere" name="profession_mere" required>
+                    <option value="">Choisissez...</option>
+                    <option value="commerce">Commerce</option>
+                    <option value="artisanat">Artisanat</option>
+                    <option value="enseignement">Enseignant</option>
+                    <option value="sante">Santé</option>
+                    <option value="menagere">Au foyer / Ménagère</option>
+                    <option value="sans_emploi">Sans emploi</option>
+                    <option value="autre">Autre</option>
+                </select>
+
+                <label>12. Autres personnes qui travaillent dans le foyer ?</label>
+                <textarea id="autres_actifs" name="autres_actifs" rows="2" placeholder="Ex: 1 grande sœur, technicienne"></textarea>
+
+                <label>13. Avez-vous un terrain ou projet d'installation en dehors de la ville ? <span class="required">*</span></label>
+                <div class="option"><input type="radio" name="projet_terrain" value="oui" id="terrain_oui" required> Oui</div>
+                <div class="option"><input type="radio" name="projet_terrain" value="non"> Non, je vis uniquement en ville</div>
+
+                <label id="lieu_terrain_label" style="display:none;">14. Où se situe ce lieu ?</label>
+                <input type="text" id="lieu_terrain" name="lieu_terrain" placeholder="Ex: Ambositra, Itasy..." style="display:none;">
+
+                <label>15. À quelle distance de votre résidence actuelle ? <span class="required">*</span></label>
+                <select id="distance_terrain_km" name="distance_terrain_km" required>
+                    <option value="">Choisissez...</option>
+                    <option value="50">Moins de 50 km</option>
+                    <option value="125">50 à 200 km</option>
+                    <option value="350">200 à 500 km</option>
+                    <option value="600">Plus de 500 km</option>
+                </select>
+
+                <label>18. Votre consommation mensuelle d'électricité ? (kWh ou Ar) <span class="required">*</span></label>
+                <input type="text" id="consommation" name="consommation" placeholder="Ex: 120 kWh ou 60 000 Ar" required>
+
+                <label>19. Comment est votre accès à l'électricité actuellement ? <span class="required">*</span></label>
+                <div class="option"><input type="checkbox" name="acces_electricite[]" value="jir_24h"> JIRAMA 24h/24</div>
+                <div class="option"><input type="checkbox" name="acces_electricite[]" value="jir_coupures"> JIRAMA avec coupures fréquentes</div>
+                <div class="option"><input type="checkbox" name="acces_electricite[]" value="jir_irregulier"> JIRAMA pas tous les jours</div>
+                <div class="option"><input type="checkbox" name="acces_electricite[]" value="generateur"> Groupe électrogène</div>
+                <div class="option"><input type="checkbox" name="acces_electricite[]" value="solaire"> Panneaux solaires</div>
+                <div class="option"><input type="checkbox" name="acces_electricite[]" value="aucun"> Pas d'électricité</div>
+
+                <button type="submit">Envoyer mes réponses et voir ma recommandation</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Afficher le champ terrain si "Oui"
+        document.getElementById('terrain_oui').addEventListener('change', () => {
+            document.getElementById('lieu_terrain_label').style.display = 'block';
+            document.getElementById('lieu_terrain').style.display = 'block';
+            document.getElementById('lieu_terrain').required = true;
+        });
+
+        // Soumission du formulaire
+        document.getElementById('questionnaire-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                email: document.getElementById('email').value,
+                age: document.getElementById('age').value,
+                statut: document.querySelector('input[name="statut"]:checked')?.value || '',
+                occupation: Array.from(document.querySelectorAll('input[name="occupation[]"]:checked')).map(cb => cb.value).join(', '),
+                lieu_actuel: document.getElementById('lieu_actuel').value,
+                nb_personnes: document.getElementById('nb_personnes').value,
+                nb_enfants: document.getElementById('nb_enfants').value,
+                profession_pere: document.getElementById('profession_pere').value,
+                profession_mere: document.getElementById('profession_mere').value,
+                autres_actifs: document.getElementById('autres_actifs').value,
+                projet_terrain: document.querySelector('input[name="projet_terrain"]:checked')?.value || '',
+                lieu_terrain: document.getElementById('lieu_terrain').value,
+                distance_terrain_km: document.getElementById('distance_terrain_km').value,
+                consommation: document.getElementById('consommation').value,
+                acces_electricite: Array.from(document.querySelectorAll('input[name="acces_electricite[]"]:checked')).map(cb => cb.value).join(', ')
+            };
+
+            fetch('http://localhost:3000/api/submit-questionnaire', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    window.location.href = result.redirect;
+                } else {
+                    alert(result.message);
+                }
+            })
+            .catch(err => alert("Erreur de connexion au serveur. Vérifiez qu'il est bien lancé."));
+        });
+    </script>
+</body>
+</html>
